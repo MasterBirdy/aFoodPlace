@@ -69,7 +69,7 @@ document.querySelectorAll("#dots span").forEach(element => {
     }); 
 });
 
-t1.from("h1", {duration: 1.5, x: 300, opacity: 0, ease: "power1.out"}, "+=0.5");
+
 
 
 document.addEventListener("click", function(e) {
@@ -80,3 +80,5 @@ icon.addEventListener("click", function (){
      nav.classList.toggle("open");
      list.classList.toggle("open");
 });
+
+t1.from("h1", {duration: 1.5, x: -300, opacity: 0, ease: "power1.out"}, "+=0.5");

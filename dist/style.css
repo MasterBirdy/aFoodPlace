@@ -49,7 +49,7 @@ li {
      background-color: transparent;
      padding: 0 1.25em;
      transition: color 0.6s ease;
-     width: 150px;
+
      z-index: 3;
      opacity: 1;
      transition: opacity .6 ease;
@@ -259,6 +259,14 @@ section::before{
           font-size: 2.1em;
      }
 }
+
+@media screen and (max-width: 400px)
+{
+     h1 {
+          font-size: 1.75em;
+     }
+}
+
 
 
  @keyframes fadeAway{

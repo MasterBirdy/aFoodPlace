@@ -5,6 +5,7 @@
 
 html, body{
      height: 100%;
+     width: 100%;
 }
 
 
@@ -40,6 +41,7 @@ ul {
      font-size: 1.75em;
      user-select: none;
      z-index: 5;
+     width: 100%;
 }
 
 li {
@@ -49,7 +51,6 @@ li {
      background-color: transparent;
      padding: 0 1.25em;
      transition: color 0.6s ease;
-     width: 150px;
      z-index: 3;
      opacity: 1;
      transition: opacity .6 ease;
@@ -190,7 +191,7 @@ i {
      z-index: 3;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
      .item{
           width: 100%;
           padding: .5em;
@@ -209,6 +210,9 @@ i {
      h2{
           font-size: 1.6em;
      }
+     h3{
+          font-size: 1.3em;
+     }
 }
 
 @media screen and (max-width: 700px){
@@ -218,7 +222,6 @@ i {
 
      ul{
           top: 10%;
-          width: 100%;
           margin: auto 0;
           flex-direction: column;
           justify-content: space-around;
@@ -256,7 +259,7 @@ i {
 
 }
 
-@media (max-width: 650px)
+@media screen and (max-width: 650px)
 {
      .item-taco{
           width: 100%; 
@@ -264,7 +267,7 @@ i {
      
 }
 
-@media (max-width: 600px)
+@media screen and (max-width: 600px)
 {
      h1{
           font-size: 2.75em;
@@ -280,5 +283,22 @@ i {
      #taco-info{
           margin-top: -1em;
           margin-bottom: 1.75em;
+     }
+}
+
+@media screen and (max-width: 450px)
+{
+     h1{
+          font-size: 2.25em;
+     }
+
+     h2{
+          font-size: 1.2em;
+     }
+     h3{
+          font-size: 1.1em;
+     }
+     .price {
+          font-size: 1.1em;
      }
 }
