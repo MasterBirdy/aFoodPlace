@@ -1,0 +1,267 @@
+*{
+     margin: 0;
+     padding: 0;
+}
+
+html, body{
+     height: 100%;
+}
+
+
+body {
+     font-family: 'Oswald', sans-serif;
+     letter-spacing: 1px;
+     background-color: #fff1caeb;
+     padding: 0;
+     margin: 0;
+}
+
+nav {
+     padding: .5em 0;
+     position: fixed;
+     width: 100%;
+     height: 5.75rem;
+     background-color: #1c1d1a;
+     text-transform: uppercase;
+     z-index: 2;
+     opacity: 1;
+     transition: all .6s ease-out;
+}
+
+ul {
+     position: relative;
+     margin: 0;
+     list-style-type: none;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+     font-size: 1.75em;
+     user-select: none;
+     z-index: 5;
+}
+
+li {
+     display: flex;
+     justify-content: center;
+     box-sizing: border-box;
+     background-color: transparent;
+     padding: 0 1.25em;
+     transition: color 0.6s ease;
+     width: 150px;
+     z-index: 3;
+     opacity: 1;
+     transition: opacity .6 ease;
+}
+
+li a{
+     text-decoration: none;
+     color: white;
+     transition: opacity .6 ease;
+     cursor: pointer;
+}
+
+li:hover, li a:hover {
+     color: rgb(252, 140, 110);
+     transition: color 0.6s ease;
+}
+
+li.chosen {
+     color: #FB4E1D;
+}
+
+#logo {
+     cursor: default;
+     height: 5.75rem;
+}
+
+i {
+     position: fixed;
+     top: 2rem;
+     right: 1rem;
+     color: white;
+     opacity: 0;
+     pointer-events: none;
+     font-size: 3rem;
+     transition: all 0.3 ease;
+     z-index: 3;
+}
+
+h1 {
+     position: absolute;
+     top: 20vh;
+     right: 2vh;
+     font-size: 5.25em;
+     border-radius: 5px;
+     padding: .5rem 1rem;
+     text-transform: uppercase;
+     text-align: center;
+     color: rgb(255, 255, 255);
+     background: linear-gradient(45deg, rgba(117, 165, 151, 0.70), rgba(145, 206, 190, 0.75));
+     text-shadow: -1px 1px #1c1d1a, 
+     1px 1px #1c1d1a, 
+    1px -1px #1c1d1a, 
+   -1px -1px #1c1d1a,
+   -2px 2px #3d3f3a, 
+     2px 2px #3d3f3a, 
+    2px -2px #3d3f3a, 
+   -2px -2px #3d3f3a;
+   letter-spacing: 3px;
+   white-space: nowrap;
+  overflow: hidden;
+}
+
+img {
+     height: 100%;
+}
+
+section{
+     position: relative;
+     height: 800px;
+}
+
+section img {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     object-fit: cover;
+     
+}
+
+section::before{
+     background-color: rgba(255, 255, 255, 0.747);
+     content: "";
+     display: block;
+     width: 100%;
+     height: 800px;
+     animation-name: fadeAway;
+     animation-duration: 1s;
+     animation-fill-mode: forwards;
+     animation-timing-function: ease-out;
+}
+
+#prev, #next{
+     position: absolute;
+     top: 50%;
+     cursor: pointer;
+     margin-left: .5em;
+     color: white;
+     font-weight: bold;
+     font-size: 2em;
+     transform: translate(0, -50%);
+     padding: 0 .2em .35em;
+     border-radius: 3px;
+     transition: all .5s ease;
+}
+
+#next {
+     right: 0;
+     margin-right: .5em; 
+}
+
+#prev:hover, #next:hover {
+     background-color: rgba(0,0,0,.8);
+}
+
+#prev:active, #next:active{
+     color: #FB4E1D;
+     font-size: 2.25em;
+}
+
+.dot {
+     cursor: pointer;
+     height: 15px;
+     width: 15px;
+     margin: 0 2px;
+     background-color: #fff;
+     border-radius: 50%;
+     display: inline-block;
+     transition: background-color 0.3s ease;
+   }
+
+#dots{
+     position: absolute;
+     bottom: 10px;
+     left: 50%;
+     transform: translate(-50%, 0);
+}
+
+.hidden {
+     opacity: 0;
+}
+
+.colored {
+     background-color: #FB4E1D;
+}
+
+@media screen and (max-width: 700px){
+
+     h1{
+          font-size: 4em;
+     }
+     nav.open{
+          height: 100vh;
+     }
+
+     ul{
+          top: 10%;
+          width: 100%;
+          margin: auto 0;
+          flex-direction: column;
+          justify-content: space-around;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity .6 ease;
+     }
+
+     ul li:nth-child(3){
+          display: none;
+     }
+
+     ul.open{
+          opacity: 1;
+          height: 80%;
+          pointer-events: auto;
+     }
+
+     i {
+          opacity: 1;
+          pointer-events: auto;
+          transition: all 0.6s ease;
+          cursor: pointer;
+     }
+
+     i:hover {
+          color: rgb(252, 140, 110);
+     }
+
+     i:active{
+          color: #FB4E1D;
+          transform: scale(1.1);
+     }
+
+
+}
+
+@media screen and (max-width: 550px)
+{
+     h1 {
+          font-size: 3.25em;
+     }
+}
+
+@media screen and (max-width: 450px)
+{
+     h1 {
+          font-size: 2.1em;
+     }
+}
+
+
+ @keyframes fadeAway{
+      0% {opacity: 1}
+      100% {opacity: 0}
+ }
