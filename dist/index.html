@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/5ee612cbe5.js" crossorigin="anonymous"></script>
+     <nav>
+          <ul>
+               <li class="chosen">Home</li>
+               <li><a href="menu.html">Menu</a></li>
+               <li><img id="logo" src="logo.png"></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Contact</a></li>
+          </ul>
+          <i class="fas fa-bars"></i>
+     </nav>
+</head>
+
+<body>
+     <section>
+          <img id="food1" src="food1.jpg">
+          <img id="food2" src="food2.jpg" class="hidden">
+          <img id="food3" src="food3.jpg" class="hidden">
+          <h1>Fresh Tacos Daily</h1>
+          <a id="prev" onClick="showSlides(-1)">❮</a>
+          <a id="next" onClick="showSlides(1)">❯</a>
+          <div id="dots">
+               <span class="dot colored" data-number="1"></span>
+               <span class="dot" data-number="2"></span>
+               <span class="dot" data-number="3"></span>
+          </div>
+     </section>
+     <script type="module" src="main.js"></script>
+
+</body>
+
+</html>
